@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
             shipping: 6.00,
             description: 'Bransoletka żółto różowa z buźką na środku.',
             image: './bransoletka_zolto_rozowa.jpg'
+        },        {
+            id: 3,
+            name: 'Bransoletka czerwono-złota',
+            price: 4.00,
+            shipping: 6.00,
+            description: 'Bransoletka czerwono-złota z większym koralem z mieszanymi kolorami.❤.',
+            image: './IMG_6800.JPG'
         }
         // Add more products as needed
     ];
