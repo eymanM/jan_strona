@@ -23,7 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Bransoletka czerwono-złota z większym koralem z mieszanymi kolorami.❤.',
             image: './IMG_6800.JPG'
         }
-        // Add more products as needed
+        // Add more products as needed},        {
+            id: 4,
+            name: 'Bransoletka różowo-kremowa'
+            price: 3.50,
+            shipping: 6.00,
+            description: 'Bansoletka różowo-kremowa z dodatkiem większych korali o kolorze kremowym.',
+            image: './watsapp_bransoletka.jpg'
+        }
     ];
 
     const productList = document.getElementById('product-list');
