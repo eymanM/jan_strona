@@ -1,18 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@keyframes snowflakes-fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+@keyframes snowflakes-shake {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(80px); }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    animation: snowflakes-fall 10s linear infinite, snowflakes-shake 3s ease-in-out infinite;
+}
+
+.snowflake:nth-of-type(odd) {
+    animation-duration: 15s, 5s;
 }
 
 header {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
+    background: linear-gradient(to right, purple, green); /* Match the rest of the page */
     padding: 20px;
     text-align: center;
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    /* background-color: #e2e6ea; */
+    background: linear-gradient(to right, purple, green);
 }
 
 main {
     padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+main:hover {
+    background-color: #f1f3f5;
+    background: linear-gradient(to right, purple, green); /* Ensure background gradient remains */
+    /* ...existing code... */
 }
 
 #product-list {
@@ -26,6 +56,12 @@ main {
     padding: 10px;
     width: 200px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-item img {
@@ -44,4 +80,16 @@ main {
 
 #back-button {
     margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+body {
+    background: linear-gradient(to right, purple, green);
+    /* ...existing code... */
 }

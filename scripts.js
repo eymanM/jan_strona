@@ -3,18 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             name: 'Bransoletka kolorowa',
-            price: 10.00,
-            shipping: 2.00,
-            description: 'Description of Product 1',
-            image: 'path/to/image1.jpg'
+            price: 4.00,
+            shipping: 6.00,
+            description: 'Bransoletka srebrno biała z perłami co 9 koralików.',
+            image: './bransoletka1.jpg'
         },
         {
             id: 2,
-            name: 'Product 2',
-            price: 20.00,
-            shipping: 3.00,
-            description: 'Description of Product 2',
-            image: 'path/to/image2.jpg'
+            name: 'Bransoletka żółto-różowa',
+            price: 3.50,
+            shipping: 6.00,
+            description: 'Bransoletka żółto różowa z buźką na środku.',
+            image: './bransoletka_zolto_rozowa.jpg'
         }
         // Add more products as needed
     ];
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetails.classList.remove('hidden');
         detailsContent.innerHTML = `
             <h2>${product.name}</h2>
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${product.image}" alt="${product.name}" style="width: 500px">
             <p>${product.description}</p>
-            <p>Price: zł${product.price.toFixed(2)}</p>
-            <p>Shipping: zł${product.shipping.toFixed(2)}</p>
+            <p>Cena: ${product.price.toFixed(2)} zł</p>
+            <p>Dostawa: ${product.shipping.toFixed(2)} zł</p>
         `;
     }
 
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         productItem.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>Price: zł${product.price.toFixed(2)}</p>
-            <p>Shipping: zł${product.shipping.toFixed(2)}</p>
+            <p>Cena: ${product.price.toFixed(2)} zł</p>
+            <p>Dostawa: ${product.shipping.toFixed(2)} zł</p>
         `;
         productItem.addEventListener('click', () => showProductDetails(product));
         productList.appendChild(productItem);
